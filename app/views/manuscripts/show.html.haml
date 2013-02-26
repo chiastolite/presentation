@@ -9,7 +9,7 @@
 %p
   %strong= model_class.human_attribute_name(:description) + ':'
   %br
-  = @manuscript.description
+  = markdown(@manuscript.description)
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), manuscripts_path, :class => 'btn'

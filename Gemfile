@@ -47,3 +47,5 @@ group :test do
 end
 
 gem 'twitter-bootstrap-rails'
+
+gem 'redcarpet'
