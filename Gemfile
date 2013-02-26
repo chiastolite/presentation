@@ -40,6 +40,7 @@ gem 'jquery-rails'
 
 group :development do
   gem 'pry-rails'
+  gem 'pry-remote'
 end
 
 group :test do
