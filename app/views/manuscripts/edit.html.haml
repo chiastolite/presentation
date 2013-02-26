@@ -1,7 +1,4 @@
-%h1 Editing manuscript
-
-= render 'form'
-
-= link_to 'Show', @manuscript
-\|
-= link_to 'Back', manuscripts_path
+- model_class = Manuscript
+.page-header
+  %h1=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human
+= render :partial => "form"
