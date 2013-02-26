@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @manuscript.title
+%p
+  %b Description:
+  = @manuscript.description
+
+= link_to 'Edit', edit_manuscript_path(@manuscript)
+\|
+= link_to 'Back', manuscripts_path

@@ -1,0 +1,21 @@
+%h1 Listing manuscripts
+
+%table
+  %tr
+    %th Title
+    %th Description
+    %th
+    %th
+    %th
+
+  - @manuscripts.each do |manuscript|
+    %tr
+      %td= manuscript.title
+      %td= manuscript.description
+      %td= link_to 'Show', manuscript
+      %td= link_to 'Edit', edit_manuscript_path(manuscript)
+      %td= link_to 'Destroy', manuscript, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Manuscript', new_manuscript_path
