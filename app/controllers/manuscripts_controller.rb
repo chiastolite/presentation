@@ -84,4 +84,5 @@ class ManuscriptsController < ApplicationController
   def presentation
     @manuscript = Manuscript.find(params[:id])
   end
+  layout "presentation", only: [:presentation]
 end
