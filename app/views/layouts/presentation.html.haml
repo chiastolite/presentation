@@ -1,0 +1,16 @@
+!!! 5
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %title= content_for?(:title) ? yield(:title) : "Presentation"
+    = csrf_meta_tags
+    = stylesheet_link_tag "presentation", :media => "all"
+    %link(href="favicon.ico" rel="shortcut icon")
+  %body
+
+    %div#impress.impress-not-supported
+      = yield
+
+    = javascript_include_tag "presentation"
