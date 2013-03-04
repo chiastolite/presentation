@@ -1,4 +1,7 @@
 Presentation::Application.routes.draw do
+
+  root to: 'manuscripts#index'
+
   resources :manuscripts
 
   match 'manuscripts/:id/presentation' => 'manuscripts#presentation', via: :get, as: :presentation_manuscript
