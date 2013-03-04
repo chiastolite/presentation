@@ -80,4 +80,8 @@ class ManuscriptsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def presentation
+    @manuscript = Manuscript.find(params[:id])
+  end
 end
